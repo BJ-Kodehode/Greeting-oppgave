@@ -9,9 +9,9 @@ namespace GreetingApp.ViewModels
     public class MainWindowViewModel : ViewModelBase
     {
         private readonly UserService _userService = new UserService();
-        private string _userName = string.Empty;  // Løser advarsel
-        private string _greetingMessage = string.Empty;  // Løser advarsel
-        private List<User> _users = new();  // Løser advarsel
+        private string _userName = string.Empty;
+        private string _greetingMessage = string.Empty;
+        private List<User> _users = new();
 
         public MainWindowViewModel()
         {
@@ -19,28 +19,24 @@ namespace GreetingApp.ViewModels
             AddUserCommand = ReactiveCommand.Create(AddUser);
         }
 
-        // UserName property (bindable)
         public string UserName
         {
             get => _userName;
             set => this.RaiseAndSetIfChanged(ref _userName, value);
         }
 
-        // GreetingMessage property (bindable)
         public string GreetingMessage
         {
             get => _greetingMessage;
             set => this.RaiseAndSetIfChanged(ref _greetingMessage, value);
         }
 
-        // Users property (bindable)
         public List<User> Users
         {
             get => _users;
             set => this.RaiseAndSetIfChanged(ref _users, value);
         }
 
-        // Command for adding user
         public ReactiveCommand<Unit, Unit> AddUserCommand { get; }
 
         private void AddUser()
@@ -61,7 +57,7 @@ namespace GreetingApp.ViewModels
                 Users.Add(new User { Name = trimmedName, LastGreetingTime = now });
             }
 
-            UpdateGreeting(now, trimmedName); // Pass trimmedName to UpdateGreeting
+            UpdateGreeting(now, trimmedName);
             _userService.SaveUsers(Users);
             UserName = string.Empty;
         }

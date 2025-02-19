@@ -58,10 +58,10 @@ C:\Koding\Kurs\C#\Greeting oppgave\obj\Debug\net9.0\Greeting oppgave.GeneratedMS
 C:\Koding\Kurs\C#\Greeting oppgave\obj\Debug\net9.0\Greeting oppgave.AssemblyInfoInputs.cache
 C:\Koding\Kurs\C#\Greeting oppgave\obj\Debug\net9.0\Greeting oppgave.AssemblyInfo.cs
 C:\Koding\Kurs\C#\Greeting oppgave\obj\Debug\net9.0\Greeting oppgave.csproj.CoreCompileInputs.cache
+C:\Koding\Kurs\C#\Greeting oppgave\obj\Debug\net9.0\Greeting oppgave.sourcelink.json
 C:\Koding\Kurs\C#\Greeting oppgave\obj\Debug\net9.0\Avalonia\Greeting oppgave.dll
 C:\Koding\Kurs\C#\Greeting oppgave\obj\Debug\net9.0\Avalonia\Greeting oppgave.pdb
 C:\Koding\Kurs\C#\Greeting oppgave\obj\Debug\net9.0\refint\Avalonia\Greeting oppgave.dll
 C:\Koding\Kurs\C#\Greeting oppgave\obj\Debug\net9.0\Greeting.F460C93C.Up2Date
 C:\Koding\Kurs\C#\Greeting oppgave\obj\Debug\net9.0\Greeting oppgave.genruntimeconfig.cache
 C:\Koding\Kurs\C#\Greeting oppgave\obj\Debug\net9.0\ref\Greeting oppgave.dll
-C:\Koding\Kurs\C#\Greeting oppgave\obj\Debug\net9.0\Greeting oppgave.sourcelink.json
