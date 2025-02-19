@@ -64,3 +64,4 @@ C:\Koding\Kurs\C#\Greeting oppgave\obj\Debug\net9.0\refint\Avalonia\Greeting opp
 C:\Koding\Kurs\C#\Greeting oppgave\obj\Debug\net9.0\Greeting.F460C93C.Up2Date
 C:\Koding\Kurs\C#\Greeting oppgave\obj\Debug\net9.0\Greeting oppgave.genruntimeconfig.cache
 C:\Koding\Kurs\C#\Greeting oppgave\obj\Debug\net9.0\ref\Greeting oppgave.dll
+C:\Koding\Kurs\C#\Greeting oppgave\obj\Debug\net9.0\Greeting oppgave.sourcelink.json

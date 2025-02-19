@@ -45,34 +45,33 @@ namespace GreetingApp.ViewModels
 
         private void AddUser()
         {
-            if (string.IsNullOrWhiteSpace(UserName))
+            var trimmedName = UserName?.Trim() ?? string.Empty;
+            if (string.IsNullOrWhiteSpace(trimmedName))
                 return;
 
-            var existingUser = Users.Find(u => u.Name.Equals(UserName, StringComparison.OrdinalIgnoreCase));
+            var existingUser = Users.Find(u => u.Name.Equals(trimmedName, StringComparison.OrdinalIgnoreCase));
             var now = DateTime.Now;
 
-            // Update existing user or add a new one
             if (existingUser != null)
             {
                 existingUser.LastGreetingTime = now;
             }
             else
             {
-                Users.Add(new User { Name = UserName, LastGreetingTime = now });
+                Users.Add(new User { Name = trimmedName, LastGreetingTime = now });
             }
 
-            UpdateGreeting(now);
+            UpdateGreeting(now, trimmedName); // Pass trimmedName to UpdateGreeting
             _userService.SaveUsers(Users);
             UserName = string.Empty;
         }
 
-        private void UpdateGreeting(DateTime time)
+        private void UpdateGreeting(DateTime time, string userName)
         {
             var hour = time.Hour;
             var greeting = hour < 12 ? "Good morning" :
-                hour < 18 ? "Good afternoon" : "Good evening";
-
-            GreetingMessage = $"{greeting}, {UserName}!";
+                           hour < 18 ? "Good afternoon" : "Good evening";
+            GreetingMessage = $"{greeting}, {userName}!";
         }
     }
 }
