@@ -1,0 +1,21 @@
+<Window xmlns="https://github.com/avaloniaui"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:vm="using:GreetingApp.ViewModels"
+        x:Class="GreetingApp.Views.MainWindow"
+        x:DataType="vm:MainWindowViewModel"
+        Title="Greeting App"
+        Width="400"
+        Height="300">
+        
+    <Design.DataContext>
+        <vm:MainWindowViewModel />
+    </Design.DataContext>
+
+    <StackPanel Margin="20" Spacing="10">
+        <TextBlock Text="Enter your name:" />
+        <!-- Two-way binding for UserName -->
+        <TextBox Text="{Binding UserName, Mode=TwoWay}" Watermark="Your name" />
+        <Button Content="Greet" Command="{Binding AddUserCommand}" />
+        <TextBlock Text="{Binding GreetingMessage}" FontSize="16" Margin="0 20" />
+    </StackPanel>
+</Window>
